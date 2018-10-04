@@ -93,7 +93,51 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+$.fn.hwatu = function () {
+  var wrapper = this;
+  var container;
+  var arr = [];
+  var totalNum = 48;
+  var shuffleNum = 10;
 
+  var shuffle = function shuffle() {
+    var random, temp;
+
+    for (var i = totalNum; i > 0; i--) {
+      random = Math.floor(Math.random() * i);
+      temp = arr[i - 1];
+      arr[i - 1] = arr[random];
+      arr[random] = temp;
+    }
+
+    console.log(arr);
+    return true;
+  };
+
+  var init = function init() {
+    //set html
+    $(wrapper).append('<div class="result"><ul></ul><ul></ul><ul></ul><ul></ul></div>');
+    $(wrapper).append('<div class="card"><ul></ul><ul></ul><ul></ul><ul></ul></div>');
+    $(wrapper).append('<div class="remain"><ul></ul></div>');
+    container = {
+      'result': this.find('.result'),
+      'card': this.find('.card'),
+      'remain': this.find('.remain')
+    }; //set arr
+
+    for (var i = 0; i < totalNum; i++) {
+      arr[i] = i;
+    } //set shuffle
+
+
+    for (var _i = 0; _i < shuffleNum; _i++) {
+      shuffle();
+    }
+  };
+
+  init();
+  return true;
+};
 
 /***/ })
 
