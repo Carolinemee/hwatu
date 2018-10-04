@@ -90,42 +90,10 @@
 /*!*************************!*\
   !*** ./src/js/entry.js ***!
   \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ "./src/js/hello.js");
-/* harmony import */ var _world__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./world */ "./src/js/world.js");
+/*! no static exports found */
+/***/ (function(module, exports) {
 
 
-document.getElementById('demo').innerHTML = "".concat(_hello__WEBPACK_IMPORTED_MODULE_0__["default"], ", ").concat(_world__WEBPACK_IMPORTED_MODULE_1__["default"], "!");
-
-/***/ }),
-
-/***/ "./src/js/hello.js":
-/*!*************************!*\
-  !*** ./src/js/hello.js ***!
-  \*************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ('Hello');
-
-/***/ }),
-
-/***/ "./src/js/world.js":
-/*!*************************!*\
-  !*** ./src/js/world.js ***!
-  \*************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ('world');
 
 /***/ })
 
