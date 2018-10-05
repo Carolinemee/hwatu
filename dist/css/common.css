@@ -1,8 +1,31 @@
 @charset "UTF-8";
 
+* {box-sizing:border-box}
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, code, del, em, img, q, s, small, strike, strong, sub, sup, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
 html {font-size:10px}
 body {font-family:HelveticaNeue-Light,AppleSDGothicNeo-Light,sans-serif;line-height:1}
 ol, ul {list-style:none}
 table {border-collapse:collapse;border-spacing:0}
+
+.hwatu {}
+.hwatu .result {height:15rem;background-color:#e1e1e1}
+.hwatu .game {overflow:hidden;height:19rem;padding:1rem}
+.hwatu .game ul {display:block;position:relative;float:left;width:8rem;height:100%;margin:0 1rem}
+.hwatu .remain {height:15rem;background-color:#e1e1e1}
+.hwatu .card {width:8rem;height:12rem;background-color:orangered;box-shadow:1px 1px 5px #ccc;font:4rem bold;line-height:12rem;text-indent:-9999px;color:#fff;text-align:center}
+.hwatu .card.active {text-indent:0}
+.hwatu .card-0.active {background-color:plum}
+.hwatu .card-1.active {background-color:antiquewhite}
+.hwatu .card-2.active {background-color:orange}
+.hwatu .card-3.active {background-color:yellow}
+.hwatu .card-4.active {background-color:yellowgreen}
+.hwatu .card-5.active {background-color:green}
+.hwatu .card-6.active {background-color:skyblue}
+.hwatu .card-7.active {background-color:blue}
+.hwatu .card-8.active {background-color:navy}
+.hwatu .card-9.active {background-color:purple}
+.hwatu .card-10.active {background-color:pink}
+.hwatu .card-11.active {background-color:palevioletred}
+.hwatu .game .card {position:absolute;left:0}
+

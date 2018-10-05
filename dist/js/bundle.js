@@ -100,7 +100,7 @@ $.fn.hwatu = function () {
   var totalNum = 48;
   var shuffleNum = 10;
 
-  var shuffle = function shuffle() {
+  var setShuffle = function setShuffle() {
     var random, temp;
 
     for (var i = totalNum; i > 0; i--) {
@@ -110,19 +110,18 @@ $.fn.hwatu = function () {
       arr[random] = temp;
     }
 
-    console.log(arr);
     return true;
   };
 
   var init = function init() {
     //set html
     $(wrapper).append('<div class="result"><ul></ul><ul></ul><ul></ul><ul></ul></div>');
-    $(wrapper).append('<div class="card"><ul></ul><ul></ul><ul></ul><ul></ul></div>');
+    $(wrapper).append('<div class="game"><ul></ul><ul></ul><ul></ul><ul></ul></div>');
     $(wrapper).append('<div class="remain"><ul></ul></div>');
     container = {
-      'result': this.find('.result'),
-      'card': this.find('.card'),
-      'remain': this.find('.remain')
+      'result': wrapper.find('.result'),
+      'game': wrapper.find('.game'),
+      'remain': wrapper.find('.remain')
     }; //set arr
 
     for (var i = 0; i < totalNum; i++) {
@@ -131,7 +130,11 @@ $.fn.hwatu = function () {
 
 
     for (var _i = 0; _i < shuffleNum; _i++) {
-      shuffle();
+      setShuffle();
+    }
+
+    for (var _i2 = 0; _i2 < 20; _i2++) {
+      container.game.find("ul:eq(".concat(_i2 % 4, ")")).append("<li class=\"card card-".concat(Math.floor(arr[_i2] / 4), " ").concat(_i2 > 15 ? 'active' : '', "\" style=\"top:").concat(Math.floor(_i2 / 4) * 1, "rem\">").concat(arr[_i2], "</li>"));
     }
   };
 
